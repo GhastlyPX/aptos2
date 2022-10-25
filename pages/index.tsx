@@ -52,7 +52,7 @@ const Home: NextPage = () => {
                         <div className={"flex flex-row gap-10 items-center"}>
                             <div className={"flex flex-col gap-2 items-center"}>
                                 <h1 className={"text-[18px]"}>Supply</h1>
-                                <h1 className={"text-[14px] text-[#B4B4B4]"}>999</h1>
+                                <h1 className={"text-[14px] text-[#B4B4B4]"}>1111</h1>
                             </div>
                             <div className={"flex flex-col gap-2 items-center"}>
                                 <h1 className={"text-[18px]"}>Price</h1>
@@ -61,7 +61,7 @@ const Home: NextPage = () => {
                             <div className={"flex flex-col gap-2 items-center"}>
                                 <h1 className={"text-[18px]"}>Minted</h1>
                                 <h1 className={"text-[14px] text-[#B4B4B4]"}>{// @ts-ignore
-                                    candyMachineData?.data?.numUploadedTokens}/999</h1>
+                                    candyMachineData?.data?.numUploadedTokens}/1111</h1>
                             </div>
                         </div>
                         <div className={"flex justify-center text-[16px]"}>
