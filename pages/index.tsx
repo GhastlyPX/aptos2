@@ -4,6 +4,7 @@ import {useEffect, useState} from "react";
 import {AptosClient} from "aptos";
 import {NODE_URL} from "../components/candyMachineInfo";
 import cmHelper from "../components/candyMachineHelper"
+import Image from "next/dist/client/future/image";
 
 const Home: NextPage = () => {
 
@@ -42,7 +43,7 @@ const Home: NextPage = () => {
             <div className={"flex w-[100%] tablet:max-w-[650px] text-[12px] justify-center px-10 items-center"}>
                 <div className={"flex flex-col tablet:flex-row border rounded-[5px] w-[100%] items-center p-10 justify-between"}>
                     <a target="_blank" rel="noopener noreferrer" href={"https://twitter.com/Immers3Labs"}>{/*Twitter link*/}
-                        <img src={"/immers3mint.png"} alt={"abc"} className={"max-w-[200px] max-h-[200px] rounded-[5px] aspect-square"} />
+                        <Image src={"/immers3mint.png"} width={200} height={200} alt={"abc"} className={"max-w-[200px] max-h-[200px] rounded-[5px] aspect-square"} />
                     </a>
                     <div className={"flex flex-col h-[200px] justify-between items-center justify-center"}>
                         <div className={"flex flex-col gap-2 justify-center"}>
