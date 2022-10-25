@@ -65,7 +65,7 @@ export const WalletButton = () => {
                 closeModal()
             }
         } catch (e) {
-            toast("Aptos wallet not installed!", {
+            toast("Petra wallet not installed!", {
                 type: "error",
             });
         }
