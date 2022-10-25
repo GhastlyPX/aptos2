@@ -47,7 +47,7 @@ const Home: NextPage = () => {
                     </a>
                     <div className={"flex flex-col h-[200px] justify-between items-center justify-center"}>
                         <div className={"flex flex-col gap-2 justify-center"}>
-                            <h1 className={"flex justify-center text-[28px]"}>Immerse3 x Arlo</h1>
+                            <h1 className={"flex justify-center text-[28px]"}>Immers3 x Arlo</h1>
                         </div>
                         <div className={"flex flex-row gap-10 items-center"}>
                             <div className={"flex flex-col gap-2 items-center"}>
