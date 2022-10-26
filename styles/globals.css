@@ -19,6 +19,15 @@ a {
   box-sizing: border-box;
 }
 
+h1 {
+  color: white;
+}
+
+button {
+  outline: 1px;
+  color: white;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

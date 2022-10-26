@@ -18,6 +18,7 @@ import {
     SafePalWalletAdapter
 } from '@manahippo/aptos-wallet-adapter';
 import Head from "next/head";
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
 
