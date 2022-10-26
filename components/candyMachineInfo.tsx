@@ -1,5 +1,5 @@
-export const candyMachineAddress = "0x33a6189ea0beb66e37953181a0e6afaa65b91e151e4cb99470488c2b095bcd42";
-export const collectionName = "Immers3 x Arlo"; // Case sensitive!
+export const candyMachineAddress = "0xde20ab94da1299b1ffc86a16540a04ddd68e5a7443fcc79b33e8ef0ed193c418";
+export const collectionName = "TEST"; // Case sensitive!
 export const mode = "mainnet"; // "dev" or "test" or "mainnet"
 
 export let NODE_URL: string;
@@ -13,7 +13,7 @@ if (mode == "dev") {
         NODE_URL = "https://fullnode.testnet.aptoslabs.com/v1";
         FAUCET_URL = "https://faucet.testnet.aptoslabs.com";
     } else {
-        NODE_URL = "https://fullnode.mainnet.aptoslabs.com/v1";
+        NODE_URL = "https://aptos-mainnet.nodereal.io/v1/ae1d16cac902481a983971715430e422";
         FAUCET_URL = null;
     }
 }
