@@ -6,6 +6,7 @@ import {useEffect, useState} from "react";
 import {toast} from "react-toastify";
 import {WL} from "./WL";
 
+// @ts-ignore
 const MintButton = ({candyMachineData}) => {
 
     const aptosClient = new AptosClient(NODE_URL);
@@ -20,6 +21,7 @@ const MintButton = ({candyMachineData}) => {
         if (candyMachineData.data.presaleMintTime === undefined || candyMachineData.data.publicMintTime === undefined) return
 
         const currentTime = Math.round(new Date().getTime() / 1000);
+        // @ts-ignore
         setTime({timeout : mintTimersTimeout, presale: cmHelper.getTimeDifference(currentTime, candyMachineData.data.presaleMintTime), public: cmHelper.getTimeDifference(currentTime, candyMachineData.data.publicMintTime)})
     }
 
