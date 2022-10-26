@@ -6,13 +6,22 @@ import {useEffect, useState} from "react";
 import {toast} from "react-toastify";
 import {WL} from "./WL";
 
-const MintButton = () => {
+const MintButton = ({candyMachineData}) => {
 
     const aptosClient = new AptosClient(NODE_URL);
 
     const wallet = useWallet();
     const [mintInfo, setMintInfo] = useState({numToMint: 1, minting: false, success: false, mintedNfts: []})
     const [group, setGroup] = useState('');
+    const [time, setTime] = useState(0);
+
+    function verifyTimeLeftToMint() {
+        const mintTimersTimeout = setTimeout(verifyTimeLeftToMint, 1000)
+        if (candyMachineData.data.presaleMintTime === undefined || candyMachineData.data.publicMintTime === undefined) return
+
+        const currentTime = Math.round(new Date().getTime() / 1000);
+        setTime({timeout : mintTimersTimeout, presale: cmHelper.getTimeDifference(currentTime, candyMachineData.data.presaleMintTime), public: cmHelper.getTimeDifference(currentTime, candyMachineData.data.publicMintTime)})
+    }
 
     const mint = async () => {
 
@@ -42,10 +51,14 @@ const MintButton = () => {
                 toast("Transaction successful!", {
                     type: "success",
                 });
+            } else {
+                toast("Transaction failed, please try again!", {
+                    type: "error",
+                });
             }
         } catch (e) {
             setMintInfo({...mintInfo, minting: false})
-            toast("Transaction failed, please try again", {
+            toast("Transaction failed, please try again!", {
                 type: "error",
             });
         }// @ts-ignore

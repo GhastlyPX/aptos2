@@ -150,7 +150,7 @@ export const WalletButton = () => {
 
     return (
         <>
-                <button type="button" onClick={openModal} className="w-[150px] h-[48px] text-[16px] font-weight-[600] outline outline-[1px] rounded-[5px] hover:bg-[#6BE2CE] hover:outline-none hover:text-black">
+                <button type="button" onClick={openModal} className={connected ? "w-[150px] h-[48px] text-[16px] font-weight-[600] outline outline-[1px] outline-[#6BE2CE] rounded-[5px] hover:bg-[#6BE2CE] hover:outline-none hover:text-black" : "w-[150px] h-[48px] text-[16px] font-weight-[600] outline outline-[1px] rounded-[5px] hover:bg-[#6BE2CE] hover:outline-none hover:text-black"}>
                    {// @ts-ignore
                        connected ? ((wallet.account?.publicKey.toString()).substring(0,6)+"...") : "Connect Wallet"}
                 </button>

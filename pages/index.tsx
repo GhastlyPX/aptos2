@@ -66,7 +66,7 @@ const Home: NextPage = () => {
                         </div>
                         <div className={"flex justify-center text-[16px]"}>
                             <MintButton // @ts-ignore
-                                data={timeLeftToMint}/>
+                                candyMachineData={candyMachineData}/>
                         </div>
                     </div>
                 </div>
