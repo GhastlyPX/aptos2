@@ -6,8 +6,7 @@ import {useEffect, useState} from "react";
 import {toast} from "react-toastify";
 import {WL} from "./WL";
 
-// @ts-ignore
-const MintButton = ({candyMachineData}) => {
+const MintButton = () => {
 
     const aptosClient = new AptosClient(NODE_URL);
 
@@ -15,15 +14,20 @@ const MintButton = ({candyMachineData}) => {
     const [mintInfo, setMintInfo] = useState({numToMint: 1, minting: false, success: false, mintedNfts: []})
     const [group, setGroup] = useState('');
     const [time, setTime] = useState(0);
+    const start = 1667129334;
 
-    function verifyTimeLeftToMint() {
-        const mintTimersTimeout = setTimeout(verifyTimeLeftToMint, 1000)
-        if (candyMachineData.data.presaleMintTime === undefined || candyMachineData.data.publicMintTime === undefined) return
+        useEffect(() => {
+            GetTime();
+            async function GetTime() {
+                const time = Math.round(new Date().getTime() / 1000)
+                setTime(time);
+            }
+            const interval = setInterval(() => {
+                GetTime();
+            }, 10000);
+            return () => clearInterval(interval);
+        }, [])
 
-        const currentTime = Math.round(new Date().getTime() / 1000);
-        // @ts-ignore
-        setTime({timeout : mintTimersTimeout, presale: cmHelper.getTimeDifference(currentTime, candyMachineData.data.presaleMintTime), public: cmHelper.getTimeDifference(currentTime, candyMachineData.data.publicMintTime)})
-    }
 
     const mint = async () => {
 
@@ -76,9 +80,8 @@ const MintButton = ({candyMachineData}) => {
             /*Insert toast wallet error*/
             console.log(e)
         }
+        console.log(wallet);
     }, [wallet]);
-
-    console.log(wallet);
 
     return (
         <>
@@ -86,9 +89,13 @@ const MintButton = ({candyMachineData}) => {
                 <button disabled={!wallet.connected} className={"w-[150px] tablet:w-[200px] h-[50px] border rounded-[5px] hover:bg-[#6BE2CE] hover:text-black duration-500 hover:border-none"}>Wallet Not Connected</button>
             )}
             {wallet.connected && (
-                group === "WL" ? <button disabled={!wallet.connected} className={"w-[150px] tablet:w-[200px] h-[50px] border rounded-[5px] hover:bg-[#6BE2CE] hover:text-black duration-500 hover:border-none"} onClick={mint}>WL</button>
+                group === "WL" ? <button disabled={!wallet.connected} className={"w-[150px] tablet:w-[200px] h-[50px] border rounded-[5px] hover:bg-[#6BE2CE] hover:text-black duration-500 hover:border-none"} onClick={mint}>
+                        {wallet.connected && (time < start) ? "WL" : "Public"}
+                    </button>
                     :
-                    group === "Public" && <button disabled={!wallet.connected} className={"w-[150px] tablet:w-[200px] h-[50px] border rounded-[5px] hover:bg-[#6BE2CE] hover:text-black duration-500 hover:border-none"} onClick={mint}>Public</button>
+                    group === "Public" && <button disabled={!wallet.connected || (time < start)} className={"w-[150px] tablet:w-[200px] h-[50px] border rounded-[5px] hover:bg-[#6BE2CE] hover:text-black duration-500 hover:border-none"} onClick={mint}>
+                        {wallet.connected && time < start ? "Public mint is not live" : "Public"}
+                    </button>
             )}
         </>
     );
