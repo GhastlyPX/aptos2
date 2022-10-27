@@ -1,5 +1,5 @@
-export const candyMachineAddress = "0x1adb3255410856e5fb3e4b96684f644879593251662c5e2f953fbe012834f574";
-export const collectionName = "TEST7"; // Case sensitive!
+export const candyMachineAddress = "0xa00ddb6c2bbe50fdeefc78962e454beb26ac487cec3a611609063d4bda3a15ba";
+export const collectionName = "TEST8"; // Case sensitive!
 export const mode = "mainnet"; // "dev" or "test" or "mainnet"
 
 export let NODE_URL: string;
