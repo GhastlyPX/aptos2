@@ -14,7 +14,7 @@ const MintButton = () => {
     const [mintInfo, setMintInfo] = useState({numToMint: 1, minting: false, success: false, mintedNfts: []})
     const [group, setGroup] = useState('');
     const [time, setTime] = useState(0);
-    const start = 1666694939;
+    const start = 1666890000;
 
         useEffect(() => {
             GetTime();
@@ -29,11 +29,10 @@ const MintButton = () => {
         }, [])
 
 
-    const mint = async () => {
+    async function mint() {
 
         try {
         if (wallet.account?.address?.toString() === undefined || mintInfo.minting) return;
-
         console.log(wallet.account?.address?.toString());
         setMintInfo({...mintInfo, minting: true})
         // Generate a transaction
@@ -56,10 +55,6 @@ const MintButton = () => {
             if (txInfo.success) {
                 toast("Transaction successful!", {
                     type: "success",
-                });
-            } else {
-                toast("Transaction failed, please try again!", {
-                    type: "error",
                 });
             }
         } catch (e) {
