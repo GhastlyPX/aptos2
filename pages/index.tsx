@@ -62,7 +62,7 @@ const Home: NextPage = () => {
                             <div className={"flex flex-col gap-2 items-center"}>
                                 <h1 className={"text-[18px]"}>Minted</h1>
                                 <h1 className={"text-[12px] text-[#B4B4B4]"}>{// @ts-ignore
-                                    candyMachineData?.data?.numUploadedTokens}/7777</h1>
+                                    candyMachineData?.data?.numUploadedTokens}/3333</h1>
                             </div>
                         </div>
                         <div className={"flex justify-center text-[16px]"}>
