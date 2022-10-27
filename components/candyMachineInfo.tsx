@@ -5,7 +5,7 @@ export const mode = "mainnet"; // "dev" or "test" or "mainnet"
 export let NODE_URL: string;
 let FAUCET_URL;
 // @ts-ignore
-if (mode == "mainnet") {
+if (mode == "dev") {
     NODE_URL = "https://fullnode.devnet.aptoslabs.com/v1";
     FAUCET_URL = "https://faucet.devnet.aptoslabs.com";
 } else { // @ts-ignore
