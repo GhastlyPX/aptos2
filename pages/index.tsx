@@ -37,7 +37,6 @@ const Home: NextPage = () => {
         setInterval(fetchCandyMachineData, autoCmRefresh)
     }, [candyMachineData])
 
-    console.log(candyMachineData);
 
     return (
         <div className={"flex flex-1 w-[100%] justify-center items-center"}>
