@@ -16,28 +16,19 @@ const Home: NextPage = () => {
     const [timeLeftToMint, setTimeLeftToMint] = useState('')
     const autoCmRefresh = 100000;
 
-    async function fetchCandyMachineData(indicateIsFetching = false) {
-        if (indicateIsFetching) setIsFetchingCmData(true)
-        const cmResourceAccount = await cmHelper.getCandyMachineResourceAccount();
-        if (cmResourceAccount === null) {
-            // @ts-ignore
-            setCandyMachineData({...candyMachineData, data: {}})
-            setIsFetchingCmData(false)
-            return
-        }
-
-        const collectionInfo = await cmHelper.getCandyMachineCollectionInfo(cmResourceAccount);
-        const configData = await cmHelper.getCandyMachineConfigData(collectionInfo.candyMachineConfigHandle);
-        // @ts-ignore
-        setCandyMachineData({...candyMachineData, data: {cmResourceAccount, ...collectionInfo, ...configData}})
-        setIsFetchingCmData(false)
-    }
-
     useEffect(() => {
-        fetchCandyMachineData(true)
-        setInterval(fetchCandyMachineData, autoCmRefresh)
-    }, [candyMachineData])
-
+        fetchCandyMachineData();
+        async function fetchCandyMachineData() {
+            const cmResourceAccount = await cmHelper.getCandyMachineResourceAccount();
+            const collectionInfo = await cmHelper.getCandyMachineCollectionInfo(cmResourceAccount);
+            const configData = await cmHelper.getCandyMachineConfigData(collectionInfo.candyMachineConfigHandle);
+            setCandyMachineData({...candyMachineData, data: {cmResourceAccount, ...collectionInfo, ...configData}})
+        }
+        const interval = setInterval(() => {
+            fetchCandyMachineData();
+        }, 5000);
+        return () => clearInterval(interval);
+        }, []);
 
     return (
         <div className={"flex flex-1 w-[100%] justify-center items-center"}>

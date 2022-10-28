@@ -19,7 +19,6 @@ import {
 } from '@manahippo/aptos-wallet-adapter';
 import Head from "next/head";
 import '../styles/globals.css'
-import {project} from "../components/candyMachineInfo";
 
 function MyApp({ Component, pageProps }: AppProps) {
 
@@ -46,7 +45,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           onError={(error: Error) => {
               console.log('Handle Error Message', error);
           }}>
-          <title>Immers3 x {project}</title>
+          <title>Immers3 x Robotium</title>
       <Layout>
       <Component {...pageProps} />
       </Layout>
