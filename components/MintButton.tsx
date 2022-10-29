@@ -6,7 +6,7 @@ import {useEffect, useState} from "react";
 import {toast} from "react-toastify";
 import {WL} from "./WL";
 
-const MintButton = () => {
+const MintButton = ({stop}) => {
 
     const aptosClient = new AptosClient(NODE_URL);
 
@@ -27,6 +27,8 @@ const MintButton = () => {
             }, 10000);
             return () => clearInterval(interval);
         }, [])
+
+    console.log(stop)
 
 
     async function mint() {
@@ -84,11 +86,11 @@ const MintButton = () => {
                 <button disabled={!wallet.connected} className={"w-[150px] tablet:w-[200px] h-[50px] border rounded-[5px] hover:bg-[#6BE2CE] hover:text-black duration-500 hover:border-none"}>Wallet Not Connected</button>
             )}
             {wallet.connected && (
-                group === "WL" ? <button disabled={!wallet.connected} className={"w-[150px] tablet:w-[200px] h-[50px] border rounded-[5px] hover:bg-[#6BE2CE] hover:text-black duration-500 hover:border-none"} onClick={mint}>
+                group === "WL" ? <button disabled={!wallet.connected || (stop == 450 || stop > 450)} className={"w-[150px] tablet:w-[200px] h-[50px] border rounded-[5px] hover:bg-[#6BE2CE] hover:text-black duration-500 hover:border-none"} onClick={mint}>
                         {wallet.connected && (time < start) ? "WL" : "Public"}
                     </button>
                     :
-                    group === "Public" && <button disabled={!wallet.connected || (time < start)} className={"w-[150px] tablet:w-[200px] h-[50px] border rounded-[5px] hover:bg-[#6BE2CE] hover:text-black duration-500 hover:border-none"} onClick={mint}>
+                    group === "Public" && <button disabled={!wallet.connected || (time < start) || (stop == 450 || stop > 450)} className={"w-[150px] tablet:w-[200px] h-[50px] border rounded-[5px] hover:bg-[#6BE2CE] hover:text-black duration-500 hover:border-none"} onClick={mint}>
                         {wallet.connected && time < start ? "Public mint is not live" : "Public"}
                     </button>
             )}

@@ -15,6 +15,7 @@ const Home: NextPage = () => {
     const [isFetchingCmData, setIsFetchingCmData] = useState(false)
     const [timeLeftToMint, setTimeLeftToMint] = useState('')
     const autoCmRefresh = 100000;
+    const [stopMinting, setStopMinting] = useState(0)
 
     useEffect(() => {
         fetchCandyMachineData();
@@ -30,6 +31,10 @@ const Home: NextPage = () => {
         }, 5000);
         return () => clearInterval(interval);
         }, []);
+
+    useEffect(() => {
+        setStopMinting(candyMachineData?.data?.numUploadedTokens)
+    })
 
     return (
         <div className={"flex flex-1 w-[100%] justify-center items-center"}>
@@ -59,7 +64,7 @@ const Home: NextPage = () => {
                             </div>
                         </div>
                         <div className={"flex justify-center text-[16px]"}>
-                            <MintButton/>
+                            <MintButton stop={stopMinting}/>
                         </div>
                     </div>
                 </div>
