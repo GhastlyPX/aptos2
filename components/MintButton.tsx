@@ -14,7 +14,7 @@ const MintButton = () => {
     const [mintInfo, setMintInfo] = useState({numToMint: 1, minting: false, success: false, mintedNfts: []})
     const [group, setGroup] = useState('');
     const [time, setTime] = useState(0);
-    const start = 1666987200;
+    const start = 1667053800;
 
         useEffect(() => {
             GetTime();

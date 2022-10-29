@@ -22,6 +22,7 @@ const Home: NextPage = () => {
             const cmResourceAccount = await cmHelper.getCandyMachineResourceAccount();
             const collectionInfo = await cmHelper.getCandyMachineCollectionInfo(cmResourceAccount);
             const configData = await cmHelper.getCandyMachineConfigData(collectionInfo.candyMachineConfigHandle);
+            // @ts-ignore
             setCandyMachineData({...candyMachineData, data: {cmResourceAccount, ...collectionInfo, ...configData}})
         }
         const interval = setInterval(() => {

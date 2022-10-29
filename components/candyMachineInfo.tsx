@@ -1,5 +1,5 @@
 export const candyMachineAddress = "0x2cf6d1f7ee0c39352a10179f93f16d0b5f998acffdc1d050902b2fe77b2d9048";
-export const collectionName = "Robotium"; // Case sensitive!
+export const collectionName = "wrong"; // Case sensitive!
 export const mode = "mainnet"; // "dev" or "test" or "mainnet"
 export const project = "Robotium"
 
