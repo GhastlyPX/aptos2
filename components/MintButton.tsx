@@ -88,7 +88,7 @@ const MintButton = () => {
                         {wallet.connected && (time < start) ? "WL" : "Public"}
                     </button>
                     :
-                    group === "Public" && <button disabled={!wallet.connected} className={"w-[150px] tablet:w-[200px] h-[50px] border rounded-[5px] hover:bg-[#6BE2CE] hover:text-black duration-500 hover:border-none"} onClick={mint}>
+                    group === "Public" && <button disabled={!wallet.connected || (time < start)} className={"w-[150px] tablet:w-[200px] h-[50px] border rounded-[5px] hover:bg-[#6BE2CE] hover:text-black duration-500 hover:border-none"} onClick={mint}>
                         {wallet.connected && time < start ? "Public mint is not live" : "Public"}
                     </button>
             )}
