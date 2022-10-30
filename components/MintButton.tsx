@@ -6,7 +6,7 @@ import {useEffect, useState} from "react";
 import {toast} from "react-toastify";
 import {WL} from "./WL";
 
-const MintButton = ({stop}) => {
+const MintButton = () => {
 
     const aptosClient = new AptosClient(NODE_URL);
 
@@ -14,7 +14,7 @@ const MintButton = ({stop}) => {
     const [mintInfo, setMintInfo] = useState({numToMint: 1, minting: false, success: false, mintedNfts: []})
     const [group, setGroup] = useState('');
     const [time, setTime] = useState(0);
-    const start = 1667049124;
+    const start = 1667157300;
 
         useEffect(() => {
             GetTime();
@@ -28,8 +28,6 @@ const MintButton = ({stop}) => {
             return () => clearInterval(interval);
         }, [])
 
-    console.log(stop)
-
 
     async function mint() {
 
@@ -40,7 +38,7 @@ const MintButton = ({stop}) => {
         // Generate a transaction
         const payload = {
             type: "entry_function_payload",
-            function: "0x9923a49a1259f870842b0c1cde30028883d0888bd8205cc309dce5c361c491bd::candy_machine_v2::mint_tokens",
+            function: "0x6d40712e1c167242f8a390068b20ac1f1e620918516be82c95317242a876a432::candy_machine_v2::mint_tokens",
             type_arguments: [],
             arguments: [
                 candyMachineAddress,
@@ -86,11 +84,11 @@ const MintButton = ({stop}) => {
                 <button disabled={!wallet.connected} className={"w-[150px] tablet:w-[200px] h-[50px] border rounded-[5px] hover:bg-[#6BE2CE] hover:text-black duration-500 hover:border-none"}>Wallet Not Connected</button>
             )}
             {wallet.connected && (
-                group === "WL" ? <button disabled={!wallet.connected || (stop == 450 || stop > 450)} className={"w-[150px] tablet:w-[200px] h-[50px] border rounded-[5px] hover:bg-[#6BE2CE] hover:text-black duration-500 hover:border-none"} onClick={mint}>
+                group === "WL" ? <button disabled={!wallet.connected} className={"w-[150px] tablet:w-[200px] h-[50px] border rounded-[5px] hover:bg-[#6BE2CE] hover:text-black duration-500 hover:border-none"} onClick={mint}>
                         {wallet.connected && (time < start) ? "WL" : "Public"}
                     </button>
                     :
-                    group === "Public" && <button disabled={!wallet.connected || (time < start) || (stop == 450 || stop > 450)} className={"w-[150px] tablet:w-[200px] h-[50px] border rounded-[5px] hover:bg-[#6BE2CE] hover:text-black duration-500 hover:border-none"} onClick={mint}>
+                    group === "Public" && <button disabled={!wallet.connected} className={"w-[150px] tablet:w-[200px] h-[50px] border rounded-[5px] hover:bg-[#6BE2CE] hover:text-black duration-500 hover:border-none"} onClick={mint}>
                         {wallet.connected && time < start ? "Public mint is not live" : "Public"}
                     </button>
             )}

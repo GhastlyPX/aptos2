@@ -8,7 +8,7 @@ async function getCandyMachineResourceAccount() {
     const resources = response.data;
 
     for (const resource of resources) {
-        if (resource.type === "0x9923a49a1259f870842b0c1cde30028883d0888bd8205cc309dce5c361c491bd::candy_machine_v2::ResourceData") {
+        if (resource.type === "0x6d40712e1c167242f8a390068b20ac1f1e620918516be82c95317242a876a432::candy_machine_v2::ResourceData") {
             return resource.data.resource_account.account;
         }
     }
@@ -36,7 +36,7 @@ async function getCandyMachineCollectionInfo(
             collectionInfo.tokenDataHandle = resource.data.token_data.handle;
             continue;
         }
-        if (resource.type === "0x9923a49a1259f870842b0c1cde30028883d0888bd8205cc309dce5c361c491bd::candy_machine_v2::CollectionConfigs") {
+        if (resource.type === "0x6d40712e1c167242f8a390068b20ac1f1e620918516be82c95317242a876a432::candy_machine_v2::CollectionConfigs") {
             collectionInfo.candyMachineConfigHandle = resource.data.collection_configs.handle;
         }
     }
@@ -49,7 +49,7 @@ async function getCandyMachineConfigData(
 ) {
     const data = JSON.stringify({
         "key_type": "vector<u8>",
-        "value_type": "0x9923a49a1259f870842b0c1cde30028883d0888bd8205cc309dce5c361c491bd::candy_machine_v2::CollectionConfig",
+        "value_type": "0x6d40712e1c167242f8a390068b20ac1f1e620918516be82c95317242a876a432::candy_machine_v2::CollectionConfig",
         "key": stringToHex(collectionName)
     });
     const customConfig = {
