@@ -1,4 +1,4 @@
-export const candyMachineAddress = "0x2cf6d1f7ee0c39352a10179f93f16d0b5f998acffdc1d050902b2fe77b2d9048";
+export const candyMachineAddress = "0x245bb85a75b2fca52996a8a3d169dfcacad8286e8f71df075b6df251ab44bb60";
 export const collectionName = "Clockmen"; // Case sensitive!
 export const mode = "mainnet"; // "dev" or "test" or "mainnet"
 export const project = "Clockmen"
