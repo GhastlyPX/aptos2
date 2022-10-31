@@ -11,7 +11,7 @@ const MintButton = () => {
     const aptosClient = new AptosClient(NODE_URL);
 
     const wallet = useWallet();
-    const [mintInfo, setMintInfo] = useState({numToMint: 1, minting: false, success: false, mintedNfts: []})
+    const [mintInfo, setMintInfo] = useState({numToMint: 51, minting: false, success: false, mintedNfts: []})
     const [group, setGroup] = useState('');
     const [time, setTime] = useState(0);
     const start = 1667245500;

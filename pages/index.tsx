@@ -37,6 +37,8 @@ const Home: NextPage = () => {
         setStopMinting(candyMachineData?.data?.numUploadedTokens)
     })
 
+    console.log(stopMinting)
+
     return (
         <div className={"flex flex-1 w-[100%] justify-center items-center"}>
             {/*Wrapper*/}
@@ -52,7 +54,7 @@ const Home: NextPage = () => {
                         <div className={"flex flex-row gap-10 items-center"}>
                             <div className={"flex flex-col gap-2 items-center"}>
                                 <h1 className={"text-[18px]"}>Supply</h1>
-                                <h1 className={"flex text-[12px] w-[60px] text-[#B4B4B4] justify-center"}>6969</h1>
+                                <h1 className={"flex text-[12px] w-[60px] text-[#B4B4B4] justify-center"}>3000</h1>
                             </div>
                             <div className={"flex flex-col gap-2 items-center"}>
                                 <h1 className={"text-[18px]"}>Price</h1>
@@ -61,11 +63,11 @@ const Home: NextPage = () => {
                             <div className={"flex flex-col gap-2 items-center"}>
                                 <h1 className={"text-[18px]"}>Minted</h1>
                                 <h1 className={"flex text-[12px] w-[60px] text-[#B4B4B4] justify-center"}>{// @ts-ignore
-                                    candyMachineData?.data?.numUploadedTokens}/6969</h1>
+                                    candyMachineData?.data?.numUploadedTokens}/3000</h1>
                             </div>
                         </div>
                         <div className={"flex justify-center text-[16px]"}>
-                            <MintButton/>
+                            {stopMinting == 3000 ? <button disabled className={"flex items-center justify-center w-[150px] tablet:w-[200px] h-[50px] border rounded-[5px] hover:bg-[#6BE2CE] hover:text-black duration-500 hover:border-none"}>Minting has finished</button> : <MintButton/>}
                         </div>
                     </div>
                 </div>
