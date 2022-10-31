@@ -14,7 +14,7 @@ const MintButton = () => {
     const [mintInfo, setMintInfo] = useState({numToMint: 1, minting: false, success: false, mintedNfts: []})
     const [group, setGroup] = useState('');
     const [time, setTime] = useState(0);
-    const start = 1667157300;
+    const start = 1667245500;
 
         useEffect(() => {
             GetTime();
@@ -56,6 +56,7 @@ const MintButton = () => {
                 toast("Transaction successful!", {
                     type: "success",
                 });
+                setMintInfo({...mintInfo, minting: false, success: true})
             }
         } catch (e) {
             setMintInfo({...mintInfo, minting: false})

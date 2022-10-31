@@ -1,7 +1,8 @@
-export const candyMachineAddress = "0x245bb85a75b2fca52996a8a3d169dfcacad8286e8f71df075b6df251ab44bb60";
-export const collectionName = "Clockmen"; // Case sensitive!
+export const candyMachineAddress = "0xdea438687faf72139c5e46f6b7f66b24de95fee714c68417a642e150b93e6ad8";
+export const collectionName = "Lost Dog Society"; // Case sensitive!
 export const mode = "mainnet"; // "dev" or "test" or "mainnet"
-export const project = "Clockmen"
+export const project = "Lost Dog Society"
+export const twitter = "https://twitter.com/LostDogSociety";
 
 export let NODE_URL: string;
 let FAUCET_URL;
