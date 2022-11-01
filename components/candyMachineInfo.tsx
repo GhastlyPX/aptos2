@@ -1,4 +1,4 @@
-export const candyMachineAddress = "0x8a1a535b1bc56cd249c7de53a984bb36f7b45e142731469bffab368defe522bd";
+export const candyMachineAddress = "0x529bfa51aff4d5efbef03c88a4ef512fa0fd2d9969fb978d69b84239e0d56e06";
 export const collectionName = "TTM Angels"; // Case sensitive!
 export const mode = "mainnet"; // "dev" or "test" or "mainnet"
 export const twitter = "https://twitter.com/ttmcapitalnft";
