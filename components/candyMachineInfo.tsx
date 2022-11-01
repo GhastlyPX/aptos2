@@ -2,9 +2,9 @@ export const candyMachineAddress = "0x529bfa51aff4d5efbef03c88a4ef512fa0fd2d9969
 export const collectionName = "TTM Angels"; // Case sensitive!
 export const mode = "mainnet"; // "dev" or "test" or "mainnet"
 export const twitter = "https://twitter.com/ttmcapitalnft";
-export const start = 1667322000;
+export const start = 0;
 export const supply = 3333;
-export const price = 3.75;
+export const price = 1.5;
 
 export let NODE_URL: string;
 let FAUCET_URL;
