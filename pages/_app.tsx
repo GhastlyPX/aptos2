@@ -17,7 +17,6 @@ import {
     BloctoWalletAdapter,
     SafePalWalletAdapter
 } from '@manahippo/aptos-wallet-adapter';
-import Head from "next/head";
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -45,7 +44,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           onError={(error: Error) => {
               console.log('Handle Error Message', error);
           }}>
-          <title>Immers3 x LSD</title>
+          <title>Immers3 x TTM</title>
       <Layout>
       <Component {...pageProps} />
       </Layout>

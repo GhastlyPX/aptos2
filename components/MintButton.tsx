@@ -1,5 +1,5 @@
 import {useWallet} from "@manahippo/aptos-wallet-adapter";
-import {candyMachineAddress, collectionName, NODE_URL} from "./candyMachineInfo"
+import {candyMachineAddress, collectionName, NODE_URL, start} from "./candyMachineInfo"
 import cmHelper from "./candyMachineHelper"
 import { AptosClient } from "aptos";
 import {useEffect, useState} from "react";
@@ -11,10 +11,9 @@ const MintButton = () => {
     const aptosClient = new AptosClient(NODE_URL);
 
     const wallet = useWallet();
-    const [mintInfo, setMintInfo] = useState({numToMint: 1, minting: false, success: false, mintedNfts: []})
+    const [mintInfo, setMintInfo] = useState({numToMint: 27, minting: false, success: false, mintedNfts: []})
     const [group, setGroup] = useState('');
     const [time, setTime] = useState(0);
-    const start = 1667245500;
 
         useEffect(() => {
             GetTime();

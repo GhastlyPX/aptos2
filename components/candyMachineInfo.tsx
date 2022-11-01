@@ -1,8 +1,10 @@
-export const candyMachineAddress = "0xdea438687faf72139c5e46f6b7f66b24de95fee714c68417a642e150b93e6ad8";
-export const collectionName = "Lost Dog Society"; // Case sensitive!
+export const candyMachineAddress = "0x8a1a535b1bc56cd249c7de53a984bb36f7b45e142731469bffab368defe522bd";
+export const collectionName = "TTM Angels"; // Case sensitive!
 export const mode = "mainnet"; // "dev" or "test" or "mainnet"
-export const project = "Lost Dog Society"
-export const twitter = "https://twitter.com/LostDogSociety";
+export const twitter = "https://twitter.com/ttmcapitalnft";
+export const start = 1667322000;
+export const supply = 3333;
+export const price = 3.75;
 
 export let NODE_URL: string;
 let FAUCET_URL;
