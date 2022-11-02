@@ -1,10 +1,10 @@
-export const candyMachineAddress = "0x529bfa51aff4d5efbef03c88a4ef512fa0fd2d9969fb978d69b84239e0d56e06";
-export const collectionName = "TTM Angels"; // Case sensitive!
+export const candyMachineAddress = "0xfb844ee642eb1b3fa78f343ee02c5206e003bb5d57bf27d47f47464ec6bba0e4";
+export const collectionName = "Anarchy Dogs"; // Case sensitive!
 export const mode = "mainnet"; // "dev" or "test" or "mainnet"
-export const twitter = "https://twitter.com/ttmcapitalnft";
-export const start = 0;
-export const supply = 3333;
-export const price = 0;
+export const twitter = "https://twitter.com/dog_anarchy";
+export const start = 1667414700;
+export const supply = 2000;
+export const price = 1.3;
 
 export let NODE_URL: string;
 let FAUCET_URL;
