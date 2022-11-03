@@ -33,8 +33,6 @@ const Home: NextPage = () => {
         setStopMinting(candyMachineData?.data?.numUploadedTokens)
     })
 
-    console.log(stopMinting)
-
     return (
         <div className={"flex flex-1 w-[100%] justify-center items-center"}>
             {/*Wrapper*/}
@@ -63,7 +61,7 @@ const Home: NextPage = () => {
                             </div>
                         </div>
                         <div className={"flex justify-center text-[16px]"}>
-                            <MintButton/>
+                            {stopMinting == supply ? <h1 className={"text-[#B4B4B4]"}>Minting has finished</h1> : <MintButton />}
                         </div>
                     </div>
                 </div>

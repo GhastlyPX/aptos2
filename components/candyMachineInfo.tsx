@@ -3,7 +3,7 @@ export const collectionName = "Forgotten Tribe"; // Case sensitive!
 export const mode = "mainnet"; // "dev" or "test" or "mainnet"
 export const twitter = "https://twitter.com/ForgottenTribe0";
 export const start = 1667498400;
-export const supply = 4444;
+export const supply = 2500;
 export const price = 2.2;
 
 export let NODE_URL: string;
