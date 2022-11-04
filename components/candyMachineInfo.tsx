@@ -4,7 +4,7 @@ export const mode = "mainnet"; // "dev" or "test" or "mainnet"
 export const twitter = "https://twitter.com/dog_anarchy";
 export const start = 0;
 export const supply = 2000;
-export const price = 0.5;
+export const price = 0;
 
 export let NODE_URL: string;
 let FAUCET_URL;
