@@ -1,7 +1,7 @@
 export const candyMachineAddress = "0x10bbbd5ad9306ac7ace84f0b449517cc35a360f0ff4f50e414d20f5499e45a65";
 export const collectionName = "Anarchy Dog"; // Case sensitive!
 export const mode = "mainnet"; // "dev" or "test" or "mainnet"
-export const twitter = "https://twitter.com/ForgottenTribe0";
+export const twitter = "https://twitter.com/dog_anarchy";
 export const start = 1667571000;
 export const supply = 2000;
 export const price = 1;
