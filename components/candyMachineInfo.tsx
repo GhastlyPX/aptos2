@@ -1,10 +1,10 @@
-export const candyMachineAddress = "0xefeea1fae66898d6b472ce12615fd5ff2589704b9853ba896a7285fdccb0da37";
-export const collectionName = "Forgotten Tribe"; // Case sensitive!
+export const candyMachineAddress = "0x10bbbd5ad9306ac7ace84f0b449517cc35a360f0ff4f50e414d20f5499e45a65";
+export const collectionName = "Anarchy Dog"; // Case sensitive!
 export const mode = "mainnet"; // "dev" or "test" or "mainnet"
 export const twitter = "https://twitter.com/ForgottenTribe0";
-export const start = 1667498400;
-export const supply = 1600;
-export const price = 2.2;
+export const start = 1667571000;
+export const supply = 2000;
+export const price = 1;
 
 export let NODE_URL: string;
 let FAUCET_URL;

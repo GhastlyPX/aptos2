@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           onError={(error: Error) => {
               console.log('Handle Error Message', error);
           }}>
-          <title>Immers3 x Forgotten Tribe</title>
+          <title>Immers3 x Anarchy Dog</title>
       <Layout>
       <Component {...pageProps} />
       </Layout>
