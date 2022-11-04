@@ -4,7 +4,7 @@ export const mode = "mainnet"; // "dev" or "test" or "mainnet"
 export const twitter = "https://twitter.com/DeadEyesNFT";
 export const start = 1667584200;
 export const supply = 3999;
-export const price = 1.5;
+export const price = 0.5;
 
 export let NODE_URL: string;
 let FAUCET_URL;
