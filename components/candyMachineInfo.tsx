@@ -1,10 +1,10 @@
-export const candyMachineAddress = "0x10bbbd5ad9306ac7ace84f0b449517cc35a360f0ff4f50e414d20f5499e45a65";
-export const collectionName = "Anarchy Dog"; // Case sensitive!
+export const candyMachineAddress = "0xbcddbc3df63a70f1fa9725ea5120c3a2525f13fb60bdfc97661164e77b4eb0ad";
+export const collectionName = "Dead Eyes"; // Case sensitive!
 export const mode = "mainnet"; // "dev" or "test" or "mainnet"
-export const twitter = "https://twitter.com/dog_anarchy";
-export const start = 0;
-export const supply = 2000;
-export const price = 0;
+export const twitter = "https://twitter.com/DeadEyesNFT";
+export const start = 1667586600;
+export const supply = 3999;
+export const price = 3.99;
 
 export let NODE_URL: string;
 let FAUCET_URL;
