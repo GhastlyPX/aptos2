@@ -2,9 +2,9 @@ export const candyMachineAddress = "0xbcddbc3df63a70f1fa9725ea5120c3a2525f13fb60
 export const collectionName = "Dead Eyes"; // Case sensitive!
 export const mode = "mainnet"; // "dev" or "test" or "mainnet"
 export const twitter = "https://twitter.com/DeadEyesNFT";
-export const start = 1667586600;
+export const start = 1667584200;
 export const supply = 3999;
-export const price = 3.99;
+export const price = 1.5;
 
 export let NODE_URL: string;
 let FAUCET_URL;
