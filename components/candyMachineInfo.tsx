@@ -3,8 +3,8 @@ export const collectionName = "AYTLO"; // Case sensitive!
 export const mode = "mainnet"; // "dev" or "test" or "mainnet"
 export const twitter = "https://twitter.com/AYTLONFT";
 export const start = 1667752200;
-export const supply = 4444;
-export const price = 1.5;
+export const supply = 2222;
+export const price = 0.8;
 
 export let NODE_URL: string;
 let FAUCET_URL;
