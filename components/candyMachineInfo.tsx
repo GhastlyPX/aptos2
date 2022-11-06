@@ -4,7 +4,7 @@ export const mode = "mainnet"; // "dev" or "test" or "mainnet"
 export const twitter = "https://twitter.com/AYTLONFT";
 export const start = 0;
 export const supply = 2222;
-export const price = 0.8;
+export const price = 0.5;
 
 export let NODE_URL: string;
 let FAUCET_URL;
