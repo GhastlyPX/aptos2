@@ -1,10 +1,10 @@
-export const candyMachineAddress = "0xbcddbc3df63a70f1fa9725ea5120c3a2525f13fb60bdfc97661164e77b4eb0ad";
-export const collectionName = "Dead Eyes"; // Case sensitive!
+export const candyMachineAddress = "0x686fa51177e458df76c9e45abd5e631a6aad53475689542892d412ab6d63976a";
+export const collectionName = "AYTLO"; // Case sensitive!
 export const mode = "mainnet"; // "dev" or "test" or "mainnet"
-export const twitter = "https://twitter.com/DeadEyesNFT";
-export const start = 1667584200;
-export const supply = 2000;
-export const price = 0.5;
+export const twitter = "https://twitter.com/AYTLONFT";
+export const start = 1667752200;
+export const supply = 4444;
+export const price = 1.5;
 
 export let NODE_URL: string;
 let FAUCET_URL;
