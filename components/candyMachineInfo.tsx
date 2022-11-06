@@ -2,7 +2,7 @@ export const candyMachineAddress = "0x686fa51177e458df76c9e45abd5e631a6aad534756
 export const collectionName = "AYTLO"; // Case sensitive!
 export const mode = "mainnet"; // "dev" or "test" or "mainnet"
 export const twitter = "https://twitter.com/AYTLONFT";
-export const start = 1667752200;
+export const start = 0;
 export const supply = 2222;
 export const price = 0.8;
 
