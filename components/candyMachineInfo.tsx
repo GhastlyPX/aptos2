@@ -17,7 +17,7 @@ if (mode == "dev") {
         NODE_URL = "https://fullnode.testnet.aptoslabs.com/v1";
         FAUCET_URL = "https://faucet.testnet.aptoslabs.com";
     } else {
-        NODE_URL = "https://aptos-mainnet.nodereal.io/v1/3ccdf334ef2c4528b118a6b6064cc39c/v1";
+        NODE_URL = "https://fullnode.mainnet.aptoslabs.com/v1";
         FAUCET_URL = null;
     }
 }
